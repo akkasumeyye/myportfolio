@@ -36,6 +36,19 @@ font-weight:100;
 margin-left:50%;
 `
 
+const ContactButton = styled.button`
+position:absolute;
+  background-color: #156d39;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight:100;
+  padding:1rem;
+  cursor: pointer;
+  margin-top: 57vh;
+  margin-left: 52vw;
+`
+
 const ContactWithMe = () => {
   return (
     <ContactContainer id="contact">
@@ -49,6 +62,7 @@ const ContactWithMe = () => {
       <ContactGithub href="https://github.com/akkasumeyye">
       Design & built by Sumeyye Akkas 
       </ContactGithub>
+      <ContactButton> Say Hello!</ContactButton>
     </ContactContainer>
   );
 };
