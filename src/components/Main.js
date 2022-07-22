@@ -98,6 +98,21 @@ const MainSkills = styled.div`
 const MainContent = styled.div`
   margin: 18rem 6rem;
   width: 40vw;
+
+  p{
+    animation: slidein 3s ;
+  }
+
+  @keyframes slidein {
+    0% {
+      margin-top: 3rem;
+      opacity: 0;
+    }
+    95% {
+      margin-top: 0;
+      opacity:1;
+    }
+  }
 `;
 
 const Name = styled.h1`
