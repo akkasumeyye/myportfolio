@@ -166,7 +166,7 @@ const Main = () => {
           </p>
           <img src={smile} alt="smile"></img>
         </MainDescription>
-        <MainLink  activeClass="active" smooth={true} spy={true} to="projects">Check out my projects!</MainLink>
+        <MainLink  activeClass="active" offset={-100} smooth={true} spy={true} to="projects">Check out my projects!</MainLink>
       </MainContent>
       <MainSkills>
         <img
