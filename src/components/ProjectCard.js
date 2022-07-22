@@ -25,10 +25,16 @@ h4{
 
   p{
     font-weight: 200;
+
+    :nth-child(3) {
+      font-size:.8rem;
+    }
   }
 
-  svg {
-    color : #fff;
+  div{
+    margin-top: 22vh;
+    margin-left: 2vw;
+    position:absolute
   }
 `;
 
@@ -37,13 +43,15 @@ const ProjectCard = ({name, desc , tech, github ,page}) => {
     <SingleCard>
     <h4>{name}</h4>
     <p>{desc}</p>
-    <p>{tech.join(", ")}</p>
+    <p>Technologies : {tech.join(", ")}</p>
+    <div>
      <a href={github} rel="noreferrer" target="_blank">
-     <AiFillGithub/>
+     <AiFillGithub color={"white"} fontSize="3.5rem"/>
      </a>
      <a href={page} rel="noreferrer" target="_blank">
-     <AiOutlineLink/>
+     <AiOutlineLink color={"white"} fontSize="3.5rem"/>
      </a>
+    </div>
     </SingleCard>
   )  
 };
