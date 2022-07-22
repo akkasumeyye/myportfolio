@@ -32,7 +32,7 @@ h4{
   }
 
   div{
-    margin-top: 22vh;
+    margin-top: 25vh;
     margin-left: 2vw;
     position:absolute
   }
