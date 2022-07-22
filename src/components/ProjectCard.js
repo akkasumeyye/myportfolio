@@ -13,22 +13,12 @@ const SingleCard = styled.div`
   border-radius: 1rem;
   padding: 3rem;
   
-  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  @keyframes slide-top {
-    0% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-    100% {
-      -webkit-transform: translateY(-45px);
-      transform: translateY(-45px);
-    }
-  }
-
   &:hover {
     transform: translateY(-5%);
     box-shadow: 11px 11px 30px 3px rgba(0, 0, 0, 0.36);
   }
+  
+
 
   h4 {
     color: #b2ffff;
