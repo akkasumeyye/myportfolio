@@ -9,6 +9,20 @@ const ContactContainer = styled.div`
   background-color: #d3fbe3;
   background-position: -40rem;
   background-size: 90%;
+  animation: slidein 3s ;
+
+@keyframes slidein {
+  0% {
+    visibility: hidden;
+    margin-top: 3rem;
+    opacity: 0;
+  }
+  95% {
+    visibility: visible;
+    margin-top: 0;
+    opacity:1;
+  }
+}
 
   h1 {
     margin-top:40vh;

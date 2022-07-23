@@ -1,5 +1,5 @@
 import React from "react";
-import aquwoman from "../assests/be.png";
+import aquwoman from "../assests/zyro-image.png";
 import smile from "../assests/emoji_angel.png";
 import styled from "styled-components";
 
@@ -105,7 +105,7 @@ const MainContent = styled.div`
 
   @keyframes slidein {
     0% {
-      margin-top: 3rem;
+      margin-top: 2rem;
       opacity: 0;
     }
     95% {
