@@ -2,11 +2,12 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
    * {
-  margin:0;
-  padding:0;
+ padding:0;
+     margin:0;
   box-sizing: border-box;
 }
 
+scroll-behavior: smooth;
 :root {
   --clr-main: #E9D5DA;
   --clr-text: #fff;
@@ -15,8 +16,6 @@ const GlobalStyle = createGlobalStyle`
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 a {
     text-decoration: none;
@@ -33,6 +32,38 @@ a {
 .navbar.colorChange{
 	  box-shadow: 0 0.3rem 1.5rem rgba(109, 109, 109, 0.15) ;
 }
+
+
+.slidein {
+  animation: slidein 3s ;
+  
+
+
+@keyframes slidein {
+  0% {
+    visibility: hidden;
+    margin-top: 3rem;
+    opacity: 0;
+  }
+  95% {
+    visibility: visible;
+    margin-top: 0;
+    opacity:1;
+  }
+}
+}
+
+
+
+@media screen and (max-width:500px){
+  html {
+    font-size: 10px;
+  }
+  svg {
+    display: none;
+  }
+
+ }
 
 `;
 

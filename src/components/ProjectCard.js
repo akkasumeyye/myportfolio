@@ -4,21 +4,22 @@ import styled from "styled-components";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 
 const SingleCard = styled.div`
+  color: #fff;
   width: 20vw;
   height: 40vh;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
   background-color: #156d39;
-  border-radius: 1rem;
   padding: 3rem;
-  
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
   &:hover {
     transform: translateY(-5%);
     box-shadow: 11px 11px 30px 3px rgba(0, 0, 0, 0.36);
   }
-  
-
 
   h4 {
     color: #b2ffff;
@@ -27,8 +28,11 @@ const SingleCard = styled.div`
   p {
     font-weight: 200;
     :nth-child(3) {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
+
+    
+  
   }
 `;
 
@@ -40,10 +44,10 @@ const ProjectCard = ({ name, desc, tech, github, page }) => {
       <p>Technologies : {tech.join(", ")}</p>
       <div>
         <a href={github} rel="noreferrer" target="_blank">
-          <AiFillGithub color={"white"} fontSize="3.5rem" />
+          <AiFillGithub color={"white"} fontSize="3rem" />
         </a>
         <a href={page} rel="noreferrer" target="_blank">
-          <AiOutlineLink color={"white"} fontSize="3.5rem" />
+          <AiOutlineLink color={"white"} fontSize="3rem" />
         </a>
       </div>
     </SingleCard>

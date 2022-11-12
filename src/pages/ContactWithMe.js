@@ -3,55 +3,41 @@ import styled from "styled-components";
 import background from "../assests/line_vector_2.svg";
 
 const ContactContainer = styled.div`
-  width: 100%;
+  max-width: 100%;
   height: 100vh;
   background: url(${background}) no-repeat;
   background-color: #d3fbe3;
   background-position: -40rem;
   background-size: 90%;
-  animation: slidein 3s ;
 
-@keyframes slidein {
-  0% {
-    visibility: hidden;
-    margin-top: 3rem;
-    opacity: 0;
-  }
-  95% {
-    visibility: visible;
-    margin-top: 0;
-    opacity:1;
-  }
-}
+  display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction :column;
+    gap:1rem;
+    
 
   h1 {
-    margin-top:40vh;
-    margin-left:43vw;
-    position: absolute;
-    font-size:5rem;
+   
+    font-size: 5rem;
   }
 
   p{
-    position: absolute;
-    margin-left:40vw;
-    margin-top:50vh;
-    width:65vh;
-    font-weight:100;
-    font-size:0.9rem;
+    width:60vw;
+    text-align:center;
+    font-weight:300;
     line-height:1.5;
   }
 `;
 
 const ContactGithub = styled.a`
 font-size:.8rem;
-margin-top:95vh;
-position:absolute;
 font-weight:100;
-margin-left:50%;
+
 `
 
 const ContactButton = styled.button`
-position:absolute;
+
   background-color: #156d39;
   color: #fff;
   border-radius: 5px;
@@ -59,13 +45,13 @@ position:absolute;
   font-weight:100;
   padding:1rem;
   cursor: pointer;
-  margin-top: 57vh;
-  margin-left: 52vw;
+  
 `
 
 const ContactWithMe = () => {
+
   return (
-    <ContactContainer id="contact">
+    <ContactContainer className= "slidein" id="contact">
       <h1>Get in touch</h1>
       <p>
         {" "}

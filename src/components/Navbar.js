@@ -14,6 +14,9 @@ const Nav = styled.nav`
   z-index: 10;
   background-color: #d3fbe3;
   height: 5rem;
+
+  
+  
   animation-duration: 0.5s;
   animation-name: slideInFromTop;
   animation-timing-function: ease-out;
@@ -33,9 +36,16 @@ const Nav = styled.nav`
       visibility: visible;
     }
   }
-`;
+  @media (max-width: 768px){
+    padding:2rem;
+    img{
+      height:51px;
+    }
+  }
+  `;
 
 const NavLink = styled(Link)`
+
   color: initial;
   font-size: inherit;
   margin-left: 2rem;
@@ -61,8 +71,8 @@ const Navbar = () => {
  
   return (
     <Nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
-      <NavLink activeClass="active" smooth={true} spy={true} to="home">
-      <img src={logo} alt="logo" width="80" height="80"></img>
+      <NavLink id="image" activeClass="active" smooth={true} spy={true} to="home">
+      <img src={logo} alt="logo" width="70" height="80"></img>
       </NavLink>
       <div>
         <NavLink activeClass="active" smooth={true} spy={true} offset={-120} to="projects">Projects</NavLink>

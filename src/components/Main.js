@@ -7,8 +7,11 @@ import { Link } from "react-scroll";
 
 const MainContainer = styled.div`
   display: flex;
+  flex-direction: row;
+  max-width: 100%;
   height: 100vh;
   background-color: #d3fbe3;
+  overflow: hidden;
 `;
 
 const MainPhoto = styled.div`
@@ -41,6 +44,9 @@ const MainPhoto = styled.div`
         opacity: 1;
       }
     }
+  }
+  @media screen and (max-width: 900px) {
+    display: none;
   }
 `;
 
@@ -93,14 +99,43 @@ const MainSkills = styled.div`
       transform: rotate(-30deg);
     }
   }
+  @media screen and (max-width: 900px) {
+    /* display: none; */
+    margin:0;
+    img{
+      width:50px;
+      &:nth-child(1){
+        position:absolute;
+        margin:8vh 2vh ;
+      }
+      &:nth-child(2){
+        position:absolute;
+        margin:9vh 20vh;
+      }
+      &:nth-child(3){
+        position:absolute;
+        margin:10vh 40vh ;
+      }
+      &:nth-child(4){
+        position:absolute;
+        margin:8vh ;
+      }
+      &:nth-child(5){
+        position:absolute;
+        margin:30vh ;
+      }
+     
+    }
+  }
 `;
 
 const MainContent = styled.div`
-  margin: 18rem 6rem;
-  width: 40vw;
+  margin: 15rem 6rem;
+  max-width: 100%;
 
-  p{
-    animation: slidein 3s ;
+  p {
+    animation: slidein 3s;
+    color: gray;
   }
 
   @keyframes slidein {
@@ -110,14 +145,28 @@ const MainContent = styled.div`
     }
     95% {
       margin-top: 0;
-      opacity:1;
+      opacity: 1;
     }
+  }
+  @media screen and (max-width: 900px) {
+   margin-inline:auto;
+   margin-top: 30vh;
+   p{
+    text-align: center;
+   }
   }
 `;
 
 const Name = styled.h1`
-  font-size: 5rem;
+  font-size: calc(1rem + 4vw);
   position: relative;
+
+  @media screen and (max-width: 900px) {
+   /* text-align: ${(props)=> 
+    props.variant === "bir" ? "center" : "initial"
+   }; */
+   text-align:center;
+  }
 
   &::after {
     content: " ";
@@ -130,36 +179,51 @@ const Name = styled.h1`
       props.variant === "bir" ? "#156d39" : "#0e0e0e"};
     margin-top: 4rem;
     margin-left: 0.5rem;
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
   }
 `;
 
 const MainDescription = styled.div`
-  display: flex;
+  display: block;
   position: relative;
   margin-top: 1rem;
-  width: 80vh;
+  width: max(50%, 50vw);
+  color: gray;
 
   h3 {
     color: #156d39;
   }
 
   img {
-    position: absolute;
-    margin-top: 1.3rem;
-    margin-left: 33vw;
     width: 1.5rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    
   }
 `;
 
 const MainLink = styled(Link)`
- position:absolute;
+  display: block;
+  margin-top: 2rem;
+  width: 11.5vw;
   background-color: #156d39;
   color: #fff;
   border-radius: 5px;
   font-size: 1rem;
-  margin-top: 2rem;
-  padding:1.3rem;
+  padding: 1.3rem;
   cursor: pointer;
+
+  @media screen and (max-width: 900px) {
+    padding: 1rem;
+    width: 35vw;
+    margin-inline: auto;
+  }
 `;
 
 const Main = () => {
@@ -173,15 +237,25 @@ const Main = () => {
         </Name>
         <Name>I build web applications</Name>
         <MainDescription>
-          <p>
-            I enjoy investing myself inside challenging projects in order to
-            give the best digital experience while i keep improving as a
-            developer. <strong><Link to="contact" style={{ color: "#156d39" , cursor:"pointer"}}>Contact me</Link></strong> if you
-            want to talk about opportunities.{" "}
-          </p>
+          I enjoy investing myself inside challenging projects in order to give
+          the best digital experience while i keep improving as a developer.{" "}
+          <strong>
+            <Link to="contact" style={{ color: "#156d39", cursor: "pointer" }}>
+              Contact me
+            </Link>
+          </strong>{" "}
+          if you want to talk about opportunities.{" "}
           <img src={smile} alt="smile"></img>
+          <MainLink
+            activeClass="active"
+            offset={-100}
+            smooth={true}
+            spy={true}
+            to="projects"
+          >
+            Check out my projects!
+          </MainLink>
         </MainDescription>
-        <MainLink  activeClass="active" offset={-100} smooth={true} spy={true} to="projects">Check out my projects!</MainLink>
       </MainContent>
       <MainSkills>
         <img

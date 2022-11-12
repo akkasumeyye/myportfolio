@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes , Route } from 'react-router-dom';
 import Home from './pages/Home';
 import ContactWithMe from './pages/ContactWithMe';
 import Projects  from './pages/Projects';
-import Navbar from './components/Navbar';
 
 function App() {
 
@@ -13,7 +12,6 @@ function App() {
     <main>
       <GlobalStyle/>
       <Router>
-        <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<ContactWithMe />} />
