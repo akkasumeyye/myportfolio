@@ -6,13 +6,12 @@ import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 const SingleCard = styled.div`
   color: #fff;
   width: 20vw;
-  height: 40vh;
+  min-height: 40vh;
   background-color: #156d39;
   padding: 3rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
   align-items: center;
   justify-content: center;
 
@@ -20,6 +19,7 @@ const SingleCard = styled.div`
     transform: translateY(-5%);
     box-shadow: 11px 11px 30px 3px rgba(0, 0, 0, 0.36);
   }
+
 
   h4 {
     color: #b2ffff;
@@ -30,8 +30,6 @@ const SingleCard = styled.div`
     :nth-child(3) {
       font-size: 0.9rem;
     }
-
-    
   
   }
 `;

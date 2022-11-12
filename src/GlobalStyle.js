@@ -59,9 +59,6 @@ a {
   html {
     font-size: 10px;
   }
-  svg {
-    display: none;
-  }
 
  }
 

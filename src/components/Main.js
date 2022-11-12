@@ -99,30 +99,46 @@ const MainSkills = styled.div`
       transform: rotate(-30deg);
     }
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (width<900px) {
     /* display: none; */
     margin:0;
     img{
-      width:50px;
+      width:40px;
+      animation-name: fadeInFromCenter;
+    animation-duration: 0.9s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    animation-delay: 1.8s;
+    @keyframes fadeInFromCenter {
+      from {
+        visibility: hidden;
+        opacity: 0;
+      }
+      to {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
       &:nth-child(1){
         position:absolute;
-        margin:8vh 2vh ;
+        margin:10vh 40vmin ;
       }
       &:nth-child(2){
         position:absolute;
-        margin:9vh 20vh;
+        margin:10vh auto;
+        
       }
       &:nth-child(3){
         position:absolute;
-        margin:10vh 40vh ;
+        margin:13vh 80vmin ;
       }
       &:nth-child(4){
         position:absolute;
-        margin:8vh ;
+        margin:65vh 80vmin;
       }
       &:nth-child(5){
         position:absolute;
-        margin:30vh ;
+        margin: 67vh auto;
       }
      
     }

@@ -11,6 +11,7 @@ const ProjectsContent = styled.div`
   h1 {
     margin:2rem;
   }
+
   div {
     display: flex;
     flex-wrap: wrap;
